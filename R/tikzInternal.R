@@ -24,6 +24,6 @@ tikz_writeRaster <- function(fileName, rasterCount, nativeRaster) {
   png::writePNG(nativeRaster, raster_file)
 
   return(
-    basename(tools::file_path_sans_ext(raster_file))
+    tools::file_path_sans_ext(raster_file)
   )
 }
